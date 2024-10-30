@@ -1,0 +1,409 @@
+body {
+	margin: 0px;
+	padding: 0px;
+
+}
+body * {
+	color: white;
+	font-size: 18px;
+	font-family: monospace;
+	text-decoration: none;
+}
+.contenedorSupremo {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+.cabezaPrincipal {
+	height: 60px;
+	width: 100%;
+	transition: height 0.09s;
+	position: relative;
+	z-index: 5;
+}
+.cabezaPrincipal>button {
+	width: 50px;
+	height: 75px;
+	border: none;
+	border-bottom-right-radius: 250px;
+	background-color: #ca0c0c;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 30px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 13;
+}
+.cabezaPrincipal>div {
+	width: 100%;
+	height: 100%;
+	background-color: #1c1a19;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	justify-content: flex-end;
+	
+}
+.cabezaPrincipal div>a {
+	height: 100%;
+	padding: 20px 20px 0px 20px; /*top padding is 25px, right padding is 50px, bottom padding is 75px
+	,left padding is 100px*/
+	text-decoration: none;
+	display: block;
+}
+.cabezaPrincipal div>button {
+	height: 100%;
+	background-color: #1c1a19;
+	border: none;
+	padding: 20px 20px 20px 20px; 
+	cursor: pointer;
+	display: block;
+}
+.cabezaPrincipal div>a:hover {
+	background-color: #ca0c0c;
+}
+.cabezaPrincipal div>button:hover {
+	background-color: #ca0c0c;
+}
+.menuExtra {
+	position: absolute;
+	top: 60px;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	height: 0px;
+	overflow: hidden;
+	transition: height 1s;
+	background-color: #3d342c;
+}
+.menuExtra a{  
+	text-align: center;
+	margin: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-decoration: none;
+	
+}
+.contactanos {
+	right: 0px;
+	width: 149px;
+}
+.acerca {
+	right: 149px;
+	width: 218px;
+}
+
+.biblio {
+	right: 367px;
+	width: 159px;
+
+}
+.prueba {
+	right: 526px;
+	width: 228px;
+}
+.mate:hover {
+	background-color: #3c0b52;
+}
+.progra:hover {
+	background-color: #1362b6;
+}
+.ingles:hover {
+	background-color: #0b4352;
+}
+.hardware:hover {
+	background-color: #ab8411;
+}
+.sisOpe:hover {
+	background-color: #ca0c0c;
+}
+.ofimatica:hover {
+	background-color: #1d1b1b;
+}
+.diseñoWeb:hover {
+	background-color: #dde10a;
+}
+.resto:hover {
+	background-color: #58534a;
+}
+.contenido {
+	font-size: 13px;
+	top: 0px;
+	left: 55px;
+	position: absolute;
+	height: 60px;
+	padding-top: 5px;
+	display: block;
+}
+.cuerpoPrincipal {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	overflow-x: auto;
+	gap: 0px;
+}
+.cuerpoPrincipal::-webkit-scrollbar {
+    display: none;
+}
+.cuerpoPrincipal {
+    -ms-overflow-style: none;
+    scrollbar-width: none;    
+}
+.extraDiv {
+	width: 0px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	transition: width 2s;
+}
+.ayudaDiv {
+	height: 70px;
+	width: 100%;
+}
+.menuHorizontal {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	flex: 1;	
+}
+.menuHorizontal::-webkit-scrollbar {
+    display: none;
+}
+.menuHorizontal {
+    -ms-overflow-style: none;
+    scrollbar-width: none;    
+}
+.menuHorizontal>a {
+	text-decoration: none;
+	text-align: center;
+	background-color: #9e9b97;
+	border-bottom-right-radius: 30px;
+	border-top-right-radius: 30px;
+	margin-left: 0px;
+	transition: margin-left 0.6s;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 250px;
+}
+.menuHorizontal>a:hover {
+	margin-left: 20px;
+	background-color: #ca0c0c;
+}
+#selectedContent {
+	background-color: #ca0c0c;
+}
+
+.cuerpo {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	background-color: #474440;/*#463f32*/
+}
+.footer {
+	display: flex;
+	flex-direction: row;
+	gap: 0px;
+	background-color: #21201e;
+	width: 100%;
+}
+.footer>div {
+	width: 33.3333%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	gap: 0px;
+}
+.footer>div>p>a {
+	margin: 0px;
+	padding: 0px;
+}
+.footer>div>p{
+	margin: 0px;
+	padding: 5px 0px 5px 0px;
+}
+.footer>div>p>a:hover {
+	color: #ca0c0c;
+}
+#menuResponsivo {
+	display: none;
+
+}
+.ppp:hover>.whatsapp{
+	color: lightgreen;
+}
+.ppp:hover>.telegram{
+	color: lightblue;
+}
+.ppp:hover>.facebook{
+	color: blue;
+}
+.ppp:hover>.instagram{
+	color: darkviolet;
+}
+.ppp:hover>.youtube{
+	color: red;
+}
+.ppp:hover>.twitter{
+	color: lightblue;
+}
+.fa-whatsapp {
+	color: lightgreen;
+}
+.fa-telegram {
+	color: lightblue;
+}
+.fa-instagram {
+	color: darkviolet;
+}
+.fa-facebook {
+	color: blue;
+}
+.fa-youtube {
+	color: red;
+}
+.fa-twitter {
+	color: lightblue;
+}
+
+.extraDiv2 {
+	width: 0%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 3;
+	transition: width 1s;
+}
+.ayudaDiv2 {
+	height: 45px;
+	width: 100%;
+}
+.menuHorizontal2 {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	flex: 1;
+	background-color: #1c1a19;	
+}
+.menuHorizontal2::-webkit-scrollbar {
+    display: none;
+}
+.menuHorizontal2 {
+    -ms-overflow-style: none;
+    scrollbar-width: none;    
+}
+.menuHorizontal2>div>button {
+	width: 100%;
+	text-align: center;
+	background-color: #1c1a19;
+	border: none;
+	height: 40px;
+	font-size: 17px;
+	margin: 0px;
+
+}
+.menuHorizontal2>div>button:hover {
+	background-color: #3d342c;
+}
+.menuHorizontal2>div>div>a {
+	width: 100%;
+	text-align: center;
+	background-color: #3d342c;
+	height: 30px;
+	margin: 0px;
+	padding-top: 12px;
+}
+.resto2:hover {
+	background-color: #58534a;
+}
+.words {
+	color: transparent;
+}
+.mmm {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+
+}
+.nnn {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;	
+	overflow-y: hidden;
+}
+.menu1 {
+	height: 0px;/*250px*/
+	transition: height 1s;
+}
+.menu2 {
+	height: 0px;/*250px*/
+	transition: height 1s;
+}
+.menu3 {
+	height: 0px;/*250px*/
+	transition: height 1s;
+}
+.menu4 {
+	height: 0px;/*250px*/
+	transition: height 1s;
+}
+.buttonWords1 {
+	transition: opacity 0s;
+	opacity: 0;
+}
+@media only screen and (max-width: 950px) {
+	#menuResponsivo {
+		display: block;
+	}
+	.cabezaPrincipal {
+		height: 45px;
+	}
+	.cabezaPrincipal>div {
+		height: 100%;
+	}
+	.cabezaPrincipal div>a {
+		display: none;
+	}
+	.cabezaPrincipal div>button {
+		padding-top: 13px;
+	}
+	.contenido {
+		padding-top: 0px;
+		margin-top: 6px;
+	}
+	.menuHorizontal>a {
+		width: 220px;
+	}
+	body * {
+	font-size: 16px;
+	}
+	.footer>div {
+		width: 100%;
+	}
+	.footer {
+		flex-direction: column;
+	}
+	
+} 

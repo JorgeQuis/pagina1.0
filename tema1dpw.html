@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tema 1 - DPW</title>
+	<link rel="icon" type="image/x-icon" href="IMAGES/logoitclapaz.jpg">
+	<link rel="stylesheet" type="text/css" href="CSS/estiloGeneral2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/estilosContenidoDidactico.css">
+	<link rel="stylesheet" type="text/css" href="CSS/juegosContenidoDinamico.css">
+	<script type="text/javascript" src="JAVASCRIPT/dinamicaGeneral.js"></script>
+	<script type="text/javascript" src="JAVASCRIPT/accionesContenidoDidactico.js"></script>
+	<script type="text/javascript" src="JAVASCRIPT/juegosContenidoDinamico.js"></script>
+	<style type="text/css">
+		#ponteAPrueba {  
+			width: 178px;
+		}
+		.concepto1>h1 {
+			background-color: #dde10a;/*OJO*/
+		}
+		.tituloCuerpo{
+			background-color: #464925;/*OJO*/
+		}
+		.conector {
+			background-color: #83878a;
+		}
+		.comentario>p {
+			background-color: #c3c664;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedorSupremo">
+		<div class="cabezaPrincipal">
+			<button onclick="functionMenuHorizontal()">&#8801;</button><!--&#8801;-->
+			<div>
+				<p class="contenido">CONTENIDO<br>DIDÁCTICO</p>
+				<!--<button onclick="">&#9681;</button>-->
+				<a href="#" class="prueba1">PONTE A PRUEBA</a>
+				<a href="#" class="biblio1">BIBLIOGRAFÍA</a>
+				<a href="#" class="acerca1">ACERCA DE NOSOTROS</a>
+				<a href="#" class="contactanos1">CONTÁCTANOS</a>
+				<button onclick="functionHello()" id="menuResponsivo">MENÚ</button>
+				
+			</div>
+			
+		</div>
+		<div class="cuerpoPrincipal">
+			
+			<div class="cuerpo">
+				<div class="tituloCuerpo">
+					<h1>INTRODUCCIÓN - CONCEPTOS CLAVE</h1>
+				</div><br><br>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>PÁGINA WEB</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo">Una página web es un documento digital que contiene información y es accesible a través de Internet mediante un navegador web.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo = document.querySelector(".parrafo");
+						let oracion1 = "Una página web es un documento digital que contiene información y es accesible a través de Internet mediante un navegador web.";
+						let oracion2 = "Una página web es un documento digital que contiene información y es accesible a través de Internet mediante un navegador web. Este documento está escrito en lenguajes como HTML (HyperText Markup Language) y suele incluir contenido multimedia como texto, imágenes, videos y enlaces a otras páginas. Las páginas web pueden ser interactivas mediante el uso de tecnologías adicionales como CSS (Cascading Style Sheets) para el diseño visual, y JavaScript para funcionalidades dinámicas.";
+						parrafo.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1, oracion2, parrafo);
+						}
+					</script>
+				</div><br><br>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>SITIO WEB</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo1">Un sitio web es un conjunto de páginas web interconectadas y organizadas bajo un mismo dominio.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo1 = document.querySelector(".parrafo1");
+						let oracion1_1 = "Un sitio web es un conjunto de páginas web interconectadas y organizadas bajo un mismo dominio.";
+						let oracion2_1 = "Un sitio web es un conjunto de páginas web interconectadas y organizadas bajo un mismo dominio, que están alojadas en un servidor y son accesibles a través de Internet. Cada sitio web tiene una URL (Uniform Resource Locator) única que permite a los usuarios acceder a sus páginas y contenido mediante un navegador.";
+						parrafo1.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_1, oracion2_1, parrafo1);
+						}
+					</script>
+				</div><br><br>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>SERVIDOR WEB</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo2">Un servidor web es una computadora o sistema de software diseñado para almacenar, procesar y entregar páginas web.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo2 = document.querySelector(".parrafo2");
+						let oracion1_2 = "Un servidor web es una computadora o sistema de software diseñado para almacenar, procesar y entregar páginas web.";
+						let oracion2_2 = "Un servidor web es una computadora o sistema de software diseñado para almacenar, procesar y entregar páginas web a los usuarios a través de Internet. Cuando un usuario ingresa una dirección URL en su navegador, este envía una solicitud al servidor web, que responde enviando la página solicitada para que el navegador la muestre.";
+						parrafo2.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_2, oracion2_2, parrafo2);
+						}
+					</script>
+				</div><br><br>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>MOTOR DE BUSQUEDA</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo3">Un motor de busqueda es un programa que actua como una herramienta en línea que permite a los usuarios encontrar información en Internet.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo3 = document.querySelector(".parrafo3");
+						let oracion1_3 = "Un motor de busqueda es un programa que actua como una herramienta en línea que permite a los usuarios encontrar información en Internet.";
+						let oracion2_3 = "Un motor de busqueda es un programa que actua como una herramienta en línea que permite a los usuarios encontrar información en Internet ingresando palabras clave o frases relacionadas con lo que están buscando. Los buscadores funcionan rastreando, indexando y clasificando el contenido de millones de páginas web para proporcionar resultados relevantes en respuesta a las consultas de los usuarios.";
+						parrafo3.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_3, oracion2_3, parrafo3);
+						}
+					</script>
+				</div><br><br>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>NAVEGADOR WEB</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo4">Un navegador web es un programa o aplicación de software que permite a los usuarios acceder, visualizar y navegar por contenido en Internet.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo4 = document.querySelector(".parrafo4");
+						let oracion1_4 = "Un navegador web es un programa o aplicación de software que permite a los usuarios acceder, visualizar y navegar por contenido en Internet.";
+						let oracion2_4 = "Un navegador web es un programa o aplicación de software que permite a los usuarios acceder, visualizar y navegar por contenido en Internet. Funciona interpretando el código de las páginas web (HTML, CSS, JavaScript) y presentándolo de manera visual y legible. Es la herramienta principal para interactuar con el contenido de la web, como sitios web, videos, imágenes, y aplicaciones en línea.";
+						parrafo4.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_4, oracion2_4, parrafo4);
+						}
+					</script>
+				</div><br><br>
+				<div class="conector">
+					<p>Una página web esta compuesta de diferentes capas. Estas son las capas fundamentales del desarrollo front-end.</p>
+				</div><br><br>
+				<div class="botonCambio">
+					<div class="botonCambio1">
+						<button onclick="functionLinks()" id="bton">HTML</button><br>
+					</div>
+					<div class="botonCambio2">
+						<iframe src="PAGINASEXTRA/paginaHTML.html" id="enlace"></iframe>
+					</div>
+					<script type="text/javascript">
+						function functionLinks() {
+							let enlace = document.getElementById("enlace");
+							let bton = document.getElementById("bton");
+							if (bton.innerHTML=="HTML") {
+								enlace.src = "PAGINASEXTRA/paginaCSS.html";
+								bton.innerHTML="HTML y CSS";
+							} else if(bton.innerHTML=="HTML y CSS") {
+								enlace.src = "PAGINASEXTRA/paginaJS.html";
+								bton.innerHTML="HTML, CSS y JS";
+							} else if(bton.innerHTML=="HTML, CSS y JS"){
+								enlace.src = "PAGINASEXTRA/paginaHTML.html";
+								bton.innerHTML="HTML";
+							}
+						}
+					</script>
+				</div><br><br>
+			</div>
+			<div class="footer">   
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">DONDE ESTAMOS</p>
+					<p><a href="https://maps.app.goo.gl/SUvPL5rN2Dfm8QAR7" target="_blank"><i class="fas fa-map-marker-alt"></i> Calle Yanacocha Esquina Catacora #969</a></p>
+					<p><i class="fas fa-phone-alt"></i> <a href="tel://59122280480" target="_blank">2280480</a>|<a href="tel://59122283240" target="_blank">2283240</a></p>
+					
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">ENLACES DE INTERES</p>
+					<p><a href="https://www.itclp.com/" target="_blank"><i class="fas fa-globe globe-icon"></i> https://www.itclp.com</a></p>
+					<p><a href="mailto:secretariaacademica@itclp.com" target="_blank"><i class="fas fa-globe globe-icon"></i> secretariaacademica@itclp.com</a></p>
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">CONTÁCTANOS POR</p>
+					<p class="ppp"><a href="https://wa.me/59165650886" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+					<p class="ppp"><a href="https://t.me/+59165650886" target="_blank" class="telegram"><i class="fab fa-telegram"></i> Telegram</a></p>
+					<p class="ppp"><a href="https://www.facebook.com/65650886" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></p>
+					<p class="ppp"><a href="https://www.instagram.com/65650886" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></p>
+					<p class="ppp"><a href="https://www.youtube.com/@jorgequisbert9115" target="_blank" class="youtube"><i class="fab fa-youtube"></i> YouTube</a></p>
+					<p class="ppp"><a href="https://x.com/65650886" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a></p>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="contactanos menuExtra">
+		<a href="contactanosEstudiantes.html" target="_blank" class="resto">Estudiantes</a>
+		<a href="contactanosInstituto.html" target="_blank" class="resto">Instituto</a>
+	</div>
+	<div class="acerca menuExtra">
+		<a href="homePage.html" target="_blank" class="resto">Inicio</a>
+		<a href="acercaIntegrantes.html" target="_blank" class="resto">Integrantes</a>
+	</div>
+	<div class="biblio menuExtra">
+		<a href="bibliompi.html" target="_blank" class="mate">MPI-101</a>
+		<a href="bibliopgr.html" target="_blank" class="progra">PGR-102</a>
+		<a href="biblioint.html" target="_blank" class="ingles">INT-103</a>
+		<a href="bibliohdc.html" target="_blank" class="hardware">HDC-104</a>
+		<a href="bibliotso.html" target="_blank" class="sisOpe">TSO-105</a>
+		<a href="bibliootm.html" target="_blank" class="ofimatica">OTM-106</a>
+		<a href="bibliodpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="prueba menuExtra" id="ponteAPrueba">
+		<a href="juego1mpi.html" target="_blank" class="mate">MPI-101</a>
+		<a href="juego1pgr.html" target="_blank" class="progra">PGR-102</a>
+		<a href="juego1int.html" target="_blank" class="ingles">INT-103</a>
+		<a href="juego1hdc.html" target="_blank" class="hardware">HDC-104</a>
+		<a href="juego1tso.html" target="_blank" class="sisOpe">TSO-105</a>
+		<a href="juego1otm.html" target="_blank" class="ofimatica">OTM-106</a>
+		<a href="juego1dpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="extraDiv">
+		<div class="ayudaDiv"></div>
+		<div class="menuHorizontal">
+			<a href="tema1dpw.html" target="_self" id="selectedContent">Tema 1 - DPW</a>
+			<a href="tema2dpw.html" target="_blank">Tema 2 - DPW</a>
+			<a href="tema3dpw.html" target="_blank">Tema 3 - DPW</a>
+			<a href="tema4dpw.html" target="_blank">Tema 4 - DPW</a>
+			<a href="tema5dpw.html" target="_blank">Tema 5 - DPW</a>
+			<a href="tema1mpi.html" target="_blank" class="mate">MPI-101</a>
+			<a href="tema1pgr.html" target="_blank" class="progra">PGR-102</a>
+			<a href="tema1int.html" target="_blank" class="ingles">INT-103</a>
+			<a href="tema1hdc.html" target="_blank" class="hardware">HDC-104</a>
+			<a href="tema1tso.html" target="_blank" class="sisOpe">TSO-105</a>
+			<a href="tema1otm.html" target="_blank" class="ofimatica">OTM-106</a>
+			<!--<a href="tema1dpw.html" target="_blank" class="diseñoWeb">DPW-107</a>-->
+		</div>
+	</div>
+	<div class="extraDiv2">
+		<div class="ayudaDiv2"></div>
+		<div class="menuHorizontal2">
+			
+			<div class="mmm">
+				<button onclick="fmenu1()" class="buttonWords1">PONTE A PRUEBA</button>
+				<div class="nnn menu1">
+					<a href="juego1mpi.html" target="_blank" class="mate words">MPI-101</a>
+					<a href="juego1pgr.html" target="_blank" class="progra words">PGR-102</a>
+					<a href="juego1int.html" target="_blank" class="ingles words">INT-103</a>
+					<a href="juego1hdc.html" target="_blank" class="hardware words">HDC-104</a>
+					<a href="juego1tso.html" target="_blank" class="sisOpe words">TSO-105</a>
+					<a href="juego1otm.html" target="_blank" class="ofimatica words">OTM-106</a>
+					<a href="juego1dpw.html" target="_blank" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu2()" class="buttonWords2">BIBLIOGRAFÍA</button>
+				<div class="nnn menu2">
+					<a href="bibliompi.html" target="_blank" class="mate words">MPI-101</a>
+					<a href="bibliopgr.html" target="_blank" class="progra words">PGR-102</a>
+					<a href="biblioint.html" target="_blank" class="ingles words">INT-103</a>
+					<a href="bibliohdc.html" target="_blank" class="hardware words">HDC-104</a>
+					<a href="bibliotso.html" target="_blank" class="sisOpe words">TSO-105</a>
+					<a href="bibliootm.html" target="_blank" class="ofimatica words">OTM-106</a>
+					<a href="bibliodpw.html" target="_blank" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu3()" class="buttonWords3">ACERCA DE NOSOTROS</button>
+				<div  class="nnn menu3">
+					<a href="homePage.html" target="_blank" class="resto2 words">Inicio</a>
+					<a href="acercaIntegrantes.html" target="_blank" class="resto2 words">Integrantes</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu4()" class="buttonWords4">CONTÁCTANOS</button>
+				<div  class="nnn menu4">
+					<a href="contactanosEstudiantes.html" target="_blank" class="resto2 words">Estudiantes</a>
+					<a href="contactanosInstituto.html" target="_blank" class="resto2 words">Instituto</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener('resize', function () {
+			let menuHorizontal2 = document.querySelector(".extraDiv2");
+			menuHorizontal2.style.width = "0%";
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink = document.querySelector('.contactanos1');
+		let toggleDiv = document.querySelector('.contactanos');
+		let isHovering = false; 
+		function showDiv() {
+		    toggleDiv.style.height = '100px';
+		}
+		function hideDiv() {
+			if (!isHovering) {
+			    toggleDiv.style.height = '0px';
+			}
+		}
+		hoverLink.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		hoverLink.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10); 
+		});
+		toggleDiv.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		toggleDiv.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink2 = document.querySelector('.acerca1');
+		let toggleDiv2 = document.querySelector('.acerca');
+		let isHovering2 = false; 
+		function showDiv2() {
+		    toggleDiv2.style.height = '100px';
+		}
+		function hideDiv2() {
+			if (!isHovering2) {
+			    toggleDiv2.style.height = '0px';
+			}
+		}
+		hoverLink2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		hoverLink2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10); 
+		});
+		toggleDiv2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		toggleDiv2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink3 = document.querySelector('.biblio1');
+		let toggleDiv3 = document.querySelector('.biblio');
+		let isHovering3= false; 
+		function showDiv3() {
+		    toggleDiv3.style.height = '356px';
+		}
+		function hideDiv3() {
+			if (!isHovering3) {
+			    toggleDiv3.style.height = '0px';
+			}
+		}
+		hoverLink3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		hoverLink3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10); 
+		});
+		toggleDiv3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		toggleDiv3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink4 = document.querySelector('.prueba1');
+		let toggleDiv4 = document.querySelector('.prueba');
+		let isHovering4= false; 
+		function showDiv4() {
+		    toggleDiv4.style.height = '356px';
+		}
+		function hideDiv4() {
+			if (!isHovering4) {
+			    toggleDiv4.style.height = '0px';
+			}
+		}
+		hoverLink4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		hoverLink4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10); 
+		});
+		toggleDiv4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		toggleDiv4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10);
+		});
+	</script>
+    <script>
+        const cuerpoPrincipal = document.querySelector('.cuerpoPrincipal');
+        let lastScrollTop = 0;
+
+        cuerpoPrincipal.addEventListener('scroll', () => {
+            let scrollTop = cuerpoPrincipal.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                contenido.style.display = "none";
+                cabezaPrincipal.style.height = "0px";
+            } else {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                setTimeout(function() {contenido.style.display = "block";}, 100);
+                
+                cabezaPrincipal.style.height = function1();
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+        function function1() {
+        	const x = "60px";
+        	const y = "45px";
+        	if (window.innerWidth>=950) {
+        		return x;
+        	} else {
+        		return y;
+        	}
+        }
+    </script>
+
+</body>
+</html>

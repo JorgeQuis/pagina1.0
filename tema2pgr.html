@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tema 2 - PGR</title>
+	<link rel="icon" type="image/x-icon" href="IMAGES/logoitclapaz.jpg">
+	<link rel="stylesheet" type="text/css" href="CSS/estiloGeneral1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/estilosContenidoDidactico.css">
+	<link rel="stylesheet" type="text/css" href="CSS/juegosContenidoDinamico.css">
+	<script type="text/javascript" src="JAVASCRIPT/dinamicaGeneral.js"></script>
+	<script type="text/javascript" src="JAVASCRIPT/accionesContenidoDidactico.js"></script>
+	<script type="text/javascript" src="JAVASCRIPT/juegosContenidoDinamico.js"></script>
+	<style type="text/css">
+		#ponteAPrueba {
+			width: 178px;
+		}
+		.concepto1>h1 {
+			background-color: #1362b6;
+		}
+		.tituloCuerpo{
+			background-color: #253649;
+		}
+		.conector {
+			background-color: #83878a;
+		}
+		.comentario>p {
+			background-color: #64a5c6;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedorSupremo">
+		<div class="cabezaPrincipal">
+			<button onclick="functionMenuHorizontal()">&#8801;</button><!--&#8801;-->
+			<div>
+				<p class="contenido">CONTENIDO<br>DIDÁCTICO</p>
+				<!--<button onclick="">&#9681;</button>-->
+				<a href="#" class="prueba1">PONTE A PRUEBA</a>
+				<a href="#" class="biblio1">BIBLIOGRAFÍA</a>
+				<a href="#" class="acerca1">ACERCA DE NOSOTROS</a>
+				<a href="#" class="contactanos1">CONTÁCTANOS</a>
+				<button onclick="functionHello()" id="menuResponsivo">MENÚ</button>
+				
+			</div>
+			
+		</div>
+		<div class="cuerpoPrincipal">
+			
+			<div class="cuerpo">
+				<div class="tituloCuerpo">
+					<h1>ALGORITMOS Y PROGRAMACIÓN</h1>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>ALGORITMO</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo">Un algoritmo es una secuencia de instrucciones.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo = document.querySelector(".parrafo");
+						let oracion1 = "Un algoritmo es una secuencia de instrucciones.";
+						let oracion2 = "Un algoritmo es una secuencia de instrucciones o pasos definidos y ordenados que describen la solución a un problema o la ejecución de una tarea específica.";
+						parrafo.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1, oracion2, parrafo);
+						}
+					</script>
+				</div>
+				<div class="comentario">
+					<p>Hay dos tipos de algoritmos: los algoritmos cualitativos y los algoritmos cuantitativos.</p>
+				</div>
+				<div class="comentario">
+					<p>Los algoritmos cualitativos se centran en la descripción del proceso de solución de un problema sin tener en cuenta la
+					precisión numérica o la eficiencia cuantitativa. Estos algoritmos se utilizan principalmente para resolver problemas que
+					implican toma de decisiones basada en condiciones o reglas, sin necesidad de realizar cálculos numéricos específicos. Los
+					algoritmos cualitativos a menudo se expresan en forma de pseudocódigo o mediante diagramas de flujo, y se centran en
+					la lógica y la secuencia de pasos necesarios para resolver un problema.</p>
+				</div>
+				<div class="comentario">
+					<p>Los algoritmos cuantitativos, por otro lado, se centran en la precisión numérica y en la eficiencia en la resolución de
+					problemas que implican cálculos y manipulaciones de datos numéricos. Estos algoritmos se utilizan para resolver
+					problemas que requieren resultados numéricos específicos, como cálculos matemáticos, análisis de datos, optimización,
+					entre otros. Los algoritmos cuantitativos se expresan generalmente en un lenguaje de programación específico y se
+					implementan de manera que produzcan resultados numéricos precisos y eficientes.</p>
+				</div>
+				<div class="juego4">
+					<h1>Ordena las Instrucciones</h1>
+			        <p>Arrastra las instrucciones para ordenarlas correctamente:</p>
+			        <div id="instrucciones">
+			            <!-- Instructions will be dynamically added here -->
+			        </div>
+			        <button id="verificar">Verificar Orden</button>
+			        <div id="resultado"></div>
+					<script type="text/javascript">
+						document.addEventListener('DOMContentLoaded', () => {
+						    const instruccionesCorrectas = [
+						        ['Colocar agua dentro de la caldera', 'Encender la caldera', 'Esperar por 10 minutos', 'Apagar la caldera'],
+						        ['Conseguir los ingredientes', 'Mezclar los ingredientes', 'Disfrutar'],
+						        ['Abrir archivo', 'Leer datos', 'Cerrar archivo'],
+						        ['INICIO(Algoritmo para hallar la base de un triángulo)', 'Definir variables: base, altura, area', 'Leer base y altura', 'Calcular: area=base*altura/2', 'Mostrar area','FIN'],
+						    ];
+
+						    let nivelActual = 0;
+
+						    const instruccionesDiv = document.getElementById('instrucciones');
+						    const verificarBtn = document.getElementById('verificar');
+						    const resultadoDiv = document.getElementById('resultado');
+
+						    // Función para cargar instrucciones
+						    function cargarInstrucciones() {
+						        instruccionesDiv.innerHTML = '';
+						        resultadoDiv.textContent = '';
+
+						        const instrucciones = [...instruccionesCorrectas[nivelActual]];
+						        instrucciones.sort(() => Math.random() - 0.5); // Desordenar
+
+						        instrucciones.forEach((instruccion, index) => {
+						            const div = document.createElement('div');
+						            div.textContent = instruccion;
+						            div.classList.add('instruccion');
+						            div.setAttribute('draggable', true);
+						            div.setAttribute('data-index', index);
+						            instruccionesDiv.appendChild(div);
+						        });
+
+						        agregarEventosDragAndDrop();
+						    }
+
+						    // Función para agregar eventos de drag-and-drop
+						    function agregarEventosDragAndDrop() {
+						        const elementos = document.querySelectorAll('.instruccion');
+
+						        elementos.forEach(elem => {
+						            elem.addEventListener('dragstart', dragStart);
+						            elem.addEventListener('dragover', dragOver);
+						            elem.addEventListener('drop', drop);
+						        });
+						    }
+
+						    let dragStartIndex;
+
+						    function dragStart() {
+						        dragStartIndex = this.closest('.instruccion').getAttribute('data-index');
+						    }
+
+						    function dragOver(e) {
+						        e.preventDefault();
+						    }
+
+						    function drop() {
+						        const dragEndIndex = this.getAttribute('data-index');
+						        intercambiarElementos(dragStartIndex, dragEndIndex);
+						    }
+
+						    function intercambiarElementos(fromIndex, toIndex) {
+						        const instrucciones = document.querySelectorAll('.instruccion');
+						        const itemUno = instrucciones[fromIndex].textContent;
+						        const itemDos = instrucciones[toIndex].textContent;
+
+						        instrucciones[fromIndex].textContent = itemDos;
+						        instrucciones[toIndex].textContent = itemUno;
+						    }
+
+						    // Verificar el orden
+						    function verificarOrden() {
+						        const instrucciones = document.querySelectorAll('.instruccion');
+						        const ordenUsuario = Array.from(instrucciones).map(div => div.textContent);
+						        const esCorrecto = ordenUsuario.every((inst, index) => inst === instruccionesCorrectas[nivelActual][index]);
+
+						        if (esCorrecto) {
+						            resultadoDiv.textContent = '¡Correcto!';
+						            nivelActual = (nivelActual + 1) % instruccionesCorrectas.length; // Siguiente nivel
+						            cargarInstrucciones();
+						        } else {
+						            resultadoDiv.textContent = 'Intenta de nuevo';
+						        }
+						    }
+
+						    verificarBtn.addEventListener('click', verificarOrden);
+						    cargarInstrucciones();
+						});
+	
+					</script>
+				</div>
+				<div class="conector">
+					<p>Todas las computadoras realizan tares a traves del seguimiento de instrucciones que le digan que debe hacer. Estas instrucciones estan en forma de programas.</p>			
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>PROGRAMA</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo1">Un programa es la implementación de un algoritmo.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo1 = document.querySelector(".parrafo1");
+						let oracion1_1 = "Un programa es la implementación de un algoritmo.";
+						let oracion2_1 = "Un programa es un conjunto de instrucciones codificadas en un lenguaje de programación que ejecuta una computadora para realizar una tarea específica. Es decir, un programa es una implementación de uno o varios algoritmos que permiten que una máquina ejecute instrucciones para hacer algo útil.";
+						parrafo1.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_1, oracion2_1, parrafo1);
+						}
+					</script>
+				</div>
+				<div class="comentario">
+					<p>Las instrucciones que indican a una computadora que hacer deben estar en un lenguaje que pueda ser entendido por las computadoras. Estos son los llamados lenguajes de programación como ser: C++, C, Java, Python, etc.</p>
+				</div>
+				<div class="comentario">
+					<p>Diferencia entre programa y algoritmo.- Los algoritmos son una idea, una solución de alto nivel. Los programas son la implementación de esta idea en un lenguaje de programación.</p>
+				</div>
+				<div class="botonCambio">
+					<div class="botonCambio1">
+						<button class="boton1">ALGORITMO</button>
+					</div>
+					<div class="botonCambio2">
+						<p class="par1">1. Inicio<br>2. Mostrar mensaje: "Introduce el primer número:" <br>3. Leer numero1<br>4. Mostrar mensaje "Introduce el segundo número:"<br>5. Leer numero2<br>6. Sumar numero1 y numero2 y almacenar el resultado en suma<br>6. Mostrar mensaje "La suma es: " seguido de suma<br>7. Fin</p>
+					</div>
+					<script type="text/javascript">
+						let boton1 = document.querySelector(".boton1");
+						let bcont1 = "ALGORITMO";
+						let bcont2 = "PROGRAMA";
+						let par1 = document.querySelector(".par1");
+						let ora1 = "1. Inicio<br>2. Mostrar mensaje: \"Introduce el primer número:\" <br>3. Leer numero1<br>4. Mostrar mensaje \"Introduce el segundo número:\"<br>5. Leer numero2<br>6. Sumar numero1 y numero2 y almacenar el resultado en suma<br>6. Mostrar mensaje \"La suma es: \" seguido de suma<br>7. Fin";
+						let ora2 = "import java.util.Scanner;<br>public class SumaDosNumeros {<br>&nbsp;public static void main(String[] args) {<br>&nbsp;&nbsp;Scanner scanner = new Scanner(System.in);<br>&nbsp;&nbsp;System.out.print(\"Introduce el primer número: \");<br>&nbsp;&nbsp;double numero1 = scanner.nextDouble();<br>&nbsp;&nbsp;System.out.print(\"Introduce el segundo número: \");<br>&nbsp;&nbsp;double numero2 = scanner.nextDouble();<br>&nbsp;&nbsp;double suma = numero1 + numero2;<br>&nbsp;&nbsp;System.out.println(\"La suma es: \" + suma);<br>&nbsp;}<br>}";
+						boton1.addEventListener("click", function11);
+						function function11() {
+						 	cambiarConcepto(bcont1, bcont2, boton1);
+						 	cambiarConcepto(ora1, ora2, par1);
+						}
+					</script>
+					
+				</div><br>
+				<div class="conector">
+					<p>Una vez definidos los conceptos de algoritmo y de programa, es necesario ver los conceptos de programar y programación.</p>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>PROGRAMAR</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo2">Programar es escribir instrucciones o código en un lenguaje de programación.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo2 = document.querySelector(".parrafo2");
+						let oracion1_2 = "Programar es escribir instrucciones o código en un lenguaje de programación.";
+						let oracion2_2 = "Escribir instrucciones o código en un lenguaje de programación para que una computadora realice una tarea específica.";
+						parrafo2.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_2, oracion2_2, parrafo2);
+						}
+					</script>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>PROGRAMACIÓN</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo3">La programación es el proceso de diseñar, escribir, probar, depurar y mantener código.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo3 = document.querySelector(".parrafo3");
+						let oracion1_3 = "La programación es el proceso de diseñar, escribir, probar, depurar y mantener código.";
+						let oracion2_3 = "La programación es el proceso de diseñar, escribir, probar, depurar y mantener el código fuente de programas informáticos, utilizando lenguajes de programación que permiten comunicarse con una computadora para realizar tareas específicas. Este proceso implica desglosar problemas complejos en pasos lógicos (algoritmos), los cuales se traducen en instrucciones que una máquina puede interpretar y ejecutar.";
+						parrafo3.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_3, oracion2_3, parrafo3);
+						}
+					</script>
+				</div>
+				<br><br>
+				<div class="conector">
+					<p>El único lenguaje de programación que puede ser entendido directamente por las computadoras es el lenguaje de maquina que esta en binario, dicho lenguaje es de bajo nivel lo cual implica que puede dar ordenes directamente al procesador y a la memoria. Los otros lenguajes de programación que son de mayor nivel requieren un traductor. Un traductor de lenguaje es una herramienta que convierte el código fuente de un programa, escrito en un lenguaje de programación, a un formato que la computadora pueda entender y ejecutar. Principalmente hay tres traductores de lenguaje</p>
+				</div>
+				<br><br>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>COMPILADOR</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo4">Convierte el código fuente completo a código máquina antes de ejecutarlo, generando un archivo ejecutable.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo4 = document.querySelector(".parrafo4");
+						let oracion1_4 = "Convierte el código fuente completo a código máquina antes de ejecutarlo, generando un archivo ejecutable.";
+						let oracion2_4 = "Un compilador traduce el código fuente escrito en un lenguaje de alto nivel (como C, C++ o Java) a código máquina o código intermedio en un solo paso antes de la ejecución. Este proceso produce un archivo ejecutable que puede ejecutarse de forma independiente sin requerir el compilador nuevamente.";
+						parrafo4.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_4, oracion2_4, parrafo4);
+						}
+					</script>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>INTÉRPRETE</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo5">Traduce y ejecuta el código fuente línea por línea en tiempo real, sin crear un archivo ejecutable.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo5 = document.querySelector(".parrafo5");
+						let oracion1_5 = "Traduce y ejecuta el código fuente línea por línea en tiempo real, sin crear un archivo ejecutable.";
+						let oracion2_5 = "Un intérprete traduce y ejecuta el código fuente línea por línea o instrucción por instrucción en tiempo real, sin generar un archivo ejecutable. Se usa principalmente en lenguajes interpretados como Python, Ruby y JavaScript.";
+						parrafo5.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_5, oracion2_5, parrafo5);
+						}
+					</script>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>ENSAMBLADOR</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo6">Traduce el lenguaje ensamblador a código máquina, instrucción por instrucción, específico para el procesador.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo6 = document.querySelector(".parrafo6");
+						let oracion1_6 = "Traduce el lenguaje ensamblador a código máquina, instrucción por instrucción, específico para el procesador.";
+						let oracion2_6 = "Un ensamblador traduce el código escrito en lenguaje ensamblador (como instrucciones de bajo nivel específicas del procesador) a código máquina. Cada instrucción en ensamblador se convierte en una instrucción de máquina, lo cual permite que el programa se ejecute directamente en el hardware.";
+						parrafo6.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_6, oracion2_6, parrafo6);
+						}
+					</script>
+				</div><br><br>
+			</div>
+			<div class="footer">
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">DONDE ESTAMOS</p>
+					<p><a href="https://maps.app.goo.gl/SUvPL5rN2Dfm8QAR7" target="_blank"><i class="fas fa-map-marker-alt"></i> Calle Yanacocha Esquina Catacora #969</a></p>
+					<p><i class="fas fa-phone-alt"></i> <a href="tel://59122280480" target="_blank">2280480</a>|<a href="tel://59122283240" target="_blank">2283240</a></p>
+					
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">ENLACES DE INTERES</p>
+					<p><a href="https://www.itclp.com/" target="_blank"><i class="fas fa-globe globe-icon"></i> https://www.itclp.com</a></p>
+					<p><a href="mailto:secretariaacademica@itclp.com" target="_blank"><i class="fas fa-globe globe-icon"></i> secretariaacademica@itclp.com</a></p>
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">CONTÁCTANOS POR</p>
+					<p class="ppp"><a href="https://wa.me/59165650886" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+					<p class="ppp"><a href="https://t.me/+59165650886" target="_blank" class="telegram"><i class="fab fa-telegram"></i> Telegram</a></p>
+					<p class="ppp"><a href="https://www.facebook.com/65650886" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></p>
+					<p class="ppp"><a href="https://www.instagram.com/65650886" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></p>
+					<p class="ppp"><a href="https://www.youtube.com/@jorgequisbert9115" target="_blank" class="youtube"><i class="fab fa-youtube"></i> YouTube</a></p>
+					<p class="ppp"><a href="https://x.com/65650886" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a></p>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="contactanos menuExtra">
+		<a href="contactanosEstudiantes.html" target="_blank" class="resto">Estudiantes</a>
+		<a href="contactanosInstituto.html" target="_blank" class="resto">Instituto</a>
+	</div>
+	<div class="acerca menuExtra">
+		<a href="homePage.html" target="_blank" class="resto">Inicio</a>
+		<a href="acercaIntegrantes.html" target="_blank" class="resto">Integrantes</a>
+	</div>
+	<div class="biblio menuExtra">
+		<a href="bibliompi.html" target="_blank" class="mate">MPI-101</a>
+		<a href="bibliopgr.html" target="_blank" class="progra">PGR-102</a>
+		<a href="biblioint.html" target="_blank" class="ingles">INT-103</a>
+		<a href="bibliohdc.html" target="_blank" class="hardware">HDC-104</a>
+		<a href="bibliotso.html" target="_blank" class="sisOpe">TSO-105</a>
+		<a href="bibliootm.html" target="_blank" class="ofimatica">OTM-106</a>
+		<a href="bibliodpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="prueba menuExtra" id="ponteAPrueba">
+		<a href="juego1mpi.html" target="_blank" class="mate">MPI-101</a>
+		<a href="juego1pgr.html" target="_blank" class="progra">PGR-102</a>
+		<a href="juego1int.html" target="_blank" class="ingles">INT-103</a>
+		<a href="juego1hdc.html" target="_blank" class="hardware">HDC-104</a>
+		<a href="juego1tso.html" target="_blank" class="sisOpe">TSO-105</a>
+		<a href="juego1otm.html" target="_blank" class="ofimatica">OTM-106</a>
+		<a href="juego1dpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="extraDiv">
+		<div class="ayudaDiv"></div>
+		<div class="menuHorizontal">
+			<a href="tema1pgr.html" target="_blank">Tema 1 - PGR</a>
+			<a href="tema2pgr.html" target="_self" id="selectedContent">Tema 2 - PGR</a>
+			<a href="tema3pgr.html" target="_blank">Tema 3 - PGR</a>
+			<a href="tema4pgr.html" target="_blank">Tema 4 - PGR</a>
+			<a href="tema5pgr.html" target="_blank">Tema 5 - PGR</a>
+			<a href="tema1mpi.html" target="_blank" class="mate">MPI-101</a>
+			<!--<a href="tema1pgr.html" target="_blank" class="progra">PGR-102</a>-->
+			<a href="tema1int.html" target="_blank" class="ingles">INT-103</a>
+			<a href="tema1hdc.html" target="_blank" class="hardware">HDC-104</a>
+			<a href="tema1tso.html" target="_blank" class="sisOpe">TSO-105</a>
+			<a href="tema1otm.html" target="_blank" class="ofimatica">OTM-106</a>
+			<a href="tema1dpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+		</div>
+	</div>
+	<div class="extraDiv2">
+		<div class="ayudaDiv2"></div>
+		<div class="menuHorizontal2">
+			
+			<div class="mmm">
+				<button onclick="fmenu1()" class="buttonWords1">PONTE A PRUEBA</button>
+				<div class="nnn menu1">
+					<a href="juego1mpi.html" target="_blank" class="mate words">MPI-101</a>
+					<a href="juego1pgr.html" target="_blank" class="progra words">PGR-102</a>
+					<a href="juego1int.html" target="_blank" class="ingles words">INT-103</a>
+					<a href="juego1hdc.html" target="_blank" class="hardware words">HDC-104</a>
+					<a href="juego1tso.html" target="_blank" class="sisOpe words">TSO-105</a>
+					<a href="juego1otm.html" target="_blank" class="ofimatica words">OTM-106</a>
+					<a href="juego1dpw.html" target="_blank" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu2()" class="buttonWords2">BIBLIOGRAFÍA</button>
+				<div class="nnn menu2">
+					<a href="bibliompi.html" target="_blank" class="mate words">MPI-101</a>
+					<a href="bibliopgr.html" target="_blank" class="progra words">PGR-102</a>
+					<a href="biblioint.html" target="_blank" class="ingles words">INT-103</a>
+					<a href="bibliohdc.html" target="_blank" class="hardware words">HDC-104</a>
+					<a href="bibliotso.html" target="_blank" class="sisOpe words">TSO-105</a>
+					<a href="bibliootm.html" target="_blank" class="ofimatica words">OTM-106</a>
+					<a href="bibliodpw.html" target="_blank" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu3()" class="buttonWords3">ACERCA DE NOSOTROS</button>
+				<div  class="nnn menu3">
+					<a href="homePage.html" target="_blank" class="resto2 words">Inicio</a>
+					<a href="acercaIntegrantes.html" target="_blank" class="resto2 words">Integrantes</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu4()" class="buttonWords4">CONTÁCTANOS</button>
+				<div  class="nnn menu4">
+					<a href="contactanosEstudiantes.html" target="_blank" class="resto2 words">Estudiantes</a>
+					<a href="contactanosInstituto.html" target="_blank" class="resto2 words">Instituto</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener('resize', function () {
+			let menuHorizontal2 = document.querySelector(".extraDiv2");
+			menuHorizontal2.style.width = "0%";
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink = document.querySelector('.contactanos1');
+		let toggleDiv = document.querySelector('.contactanos');
+		let isHovering = false; 
+		function showDiv() {
+		    toggleDiv.style.height = '100px';
+		}
+		function hideDiv() {
+			if (!isHovering) {
+			    toggleDiv.style.height = '0px';
+			}
+		}
+		hoverLink.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		hoverLink.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10); 
+		});
+		toggleDiv.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		toggleDiv.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink2 = document.querySelector('.acerca1');
+		let toggleDiv2 = document.querySelector('.acerca');
+		let isHovering2 = false; 
+		function showDiv2() {
+		    toggleDiv2.style.height = '100px';
+		}
+		function hideDiv2() {
+			if (!isHovering2) {
+			    toggleDiv2.style.height = '0px';
+			}
+		}
+		hoverLink2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		hoverLink2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10); 
+		});
+		toggleDiv2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		toggleDiv2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink3 = document.querySelector('.biblio1');
+		let toggleDiv3 = document.querySelector('.biblio');
+		let isHovering3= false; 
+		function showDiv3() {
+		    toggleDiv3.style.height = '356px';
+		}
+		function hideDiv3() {
+			if (!isHovering3) {
+			    toggleDiv3.style.height = '0px';
+			}
+		}
+		hoverLink3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		hoverLink3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10); 
+		});
+		toggleDiv3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		toggleDiv3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink4 = document.querySelector('.prueba1');
+		let toggleDiv4 = document.querySelector('.prueba');
+		let isHovering4= false; 
+		function showDiv4() {
+		    toggleDiv4.style.height = '356px';
+		}
+		function hideDiv4() {
+			if (!isHovering4) {
+			    toggleDiv4.style.height = '0px';
+			}
+		}
+		hoverLink4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		hoverLink4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10); 
+		});
+		toggleDiv4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		toggleDiv4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10);
+		});
+	</script>
+    <script>
+        const cuerpoPrincipal = document.querySelector('.cuerpoPrincipal');
+        let lastScrollTop = 0;
+
+        cuerpoPrincipal.addEventListener('scroll', () => {
+            let scrollTop = cuerpoPrincipal.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                contenido.style.display = "none";
+                cabezaPrincipal.style.height = "0px";
+            } else {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                setTimeout(function() {contenido.style.display = "block";}, 100);
+                
+                cabezaPrincipal.style.height = function1();
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+        function function1() {
+        	const x = "60px";
+        	const y = "45px";
+        	if (window.innerWidth>=950) {
+        		return x;
+        	} else {
+        		return y;
+        	}
+        }
+    </script>
+
+</body>
+</html>

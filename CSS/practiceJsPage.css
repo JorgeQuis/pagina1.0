@@ -1,0 +1,35 @@
+* {
+	color: white;
+}
+body {
+	background-color: black;
+	margin: 0px;
+	padding: 0px;
+}
+button {
+	background-color: darkgreen;
+}
+input {
+	color: black;
+}
+.calculatorSpace {
+	width: 100%;
+}
+.calculatorSpace div {
+	width: 40%;
+	margin: auto;
+	background-color: darkgrey;
+	height: 400px;
+}
+.calculatorSpace div button {
+	width: 100px;
+	height: 100px;
+}
+.calculatorSpace div input {
+	width: 80%;
+	height: 80px;
+	margin: auto;
+	margin-left: 50px;
+	margin-bottom: 30px;
+	margin-top: 40px;
+}

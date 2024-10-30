@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tema 1 - HDC</title>
+	<link rel="icon" type="image/x-icon" href="IMAGES/logoitclapaz.jpg">
+	<link rel="stylesheet" type="text/css" href="CSS/estiloGeneral5.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/estilosContenidoDidactico.css">
+	<link rel="stylesheet" type="text/css" href="CSS/juegosContenidoDinamico.css">
+	<script type="text/javascript" src="JAVASCRIPT/dinamicaGeneral.js"></script>
+	<script type="text/javascript" src="JAVASCRIPT/accionesContenidoDidactico.js"></script>
+	<script type="text/javascript" src="JAVASCRIPT/juegosContenidoDinamico.js"></script>
+	<style type="text/css">
+		#ponteAPrueba {
+			width: 178px;
+		}
+		.concepto1>h1 {
+			background-color: #ab8411;
+		}
+		.tituloCuerpo{
+			background-color: #493e25;
+		}
+		.conector {
+			background-color: #83878a;
+		}
+		.comentario>p {
+			background-color: #c6b664;
+			color: black;
+		}
+		.comentarioGrafico2>p {
+			background-color: #c6b664;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedorSupremo">
+		<div class="cabezaPrincipal">
+			<button onclick="functionMenuHorizontal()">&#8801;</button><!--&#8801;-->
+			<div>
+				<p class="contenido">CONTENIDO<br>DIDÁCTICO</p>
+				<!--<button onclick="">&#9681;</button>-->
+				<a href="#" class="prueba1">PONTE A PRUEBA</a>
+				<a href="#" class="biblio1">BIBLIOGRAFÍA</a>
+				<a href="#" class="acerca1">ACERCA DE NOSOTROS</a>
+				<a href="#" class="contactanos1">CONTÁCTANOS</a>
+				<button onclick="functionHello()" id="menuResponsivo">MENÚ</button>
+				
+			</div>
+			
+		</div>
+		<div class="cuerpoPrincipal">
+			
+			<div class="cuerpo">
+				<div class="tituloCuerpo">
+					<h1>INTRODUCCIÓN A LA ELECTRÓNICA</h1>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>FÍSICA</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo">La física es una ciencia natural.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo = document.querySelector(".parrafo");
+						let oracion1 = "La física es una ciencia natural.";
+						let oracion2 = "La física es la ciencia que estudia las propiedades fundamentales de la materia, la energía, el espacio y el tiempo, y cómo interactúan entre sí. Su objetivo principal es comprender los principios y leyes que gobiernan el universo, desde las partículas subatómicas hasta las galaxias y el cosmos en su totalidad. A través de observaciones, experimentos y teorías, la física busca explicar fenómenos naturales como el movimiento, la gravedad, el electromagnetismo y la energía, ayudándonos a entender cómo funciona el mundo que nos rodea.";
+						parrafo.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1, oracion2, parrafo);
+						}
+					</script>
+				</div><br>
+				<div class="comentarioGrafico">
+					<div class="comentarioGrafico1">
+						<img src="IMAGES/atomo.jpg">
+					</div>
+					<div class="comentarioGrafico2">
+						<p>El átomo es la unidad básica de la materia y está compuesto por un núcleo, que contiene protones y neutrones, rodeado de electrones. Los protones tienen carga positiva, los electrones carga negativa y los neutrones no tienen carga. Un elemento químico es un tipo de átomo con un número específico de protones, lo que determina su identidad química y física. Una molécula es un grupo de dos o más átomos unidos que actúan como una sola partícula. Los átomos son eléctricamente neutros a menos que pierdan o ganen electrones, lo que los convierte en iones con carga positiva o negativa.</p>
+					</div>
+				</div>
+				<div class="conector">
+					<p>Como podemos ver la carga eléctrica, la cual depende de la perdidada de electrones por los átomos, es un propiedad importante de la materia. </p>
+				</div><br>
+				
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>LA CARGA ELÉCTRICA</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo1">La carga eléctrica es una propiedad fundamental de las partículas subatómicas.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo1 = document.querySelector(".parrafo1");
+						let oracion1_1 = "La carga eléctrica es una propiedad fundamental de las partículas subatómicas.";
+						let oracion2_1 = "La carga eléctrica es una propiedad fundamental de las partículas subatómicas, como los electrones y protones, que determina cómo interactúan entre sí a través de fuerzas electromagnéticas. Se mide en Culombios(C) y se representa con la variable q.";
+						parrafo1.addEventListener("click", function2);
+						function function2() {
+						 	cambiarConcepto(oracion1_1, oracion2_1, parrafo1);
+						}
+					</script>
+				</div>
+				<div class="comentario">
+					<p>Un objeto con carga eléctrica positiva o negativa genera una fuerza eléctrica: las cargas iguales se repelen y las opuestas se atraen. El movimiento de cargas en un campo magnético produce una fuerza electromotriz (EMF), que impulsa a las partículas cargadas, y se mide como voltaje. El desequilibrio de cargas en diferentes regiones crea un EMF que las atrae hacia la región opuesta, un fenómeno llamado polaridad.
+					Si hay un camino conductor, las cargas fluyen, creando corriente eléctrica. Los conductores permiten el paso fácil de corriente, mientras que los aislantes lo impiden, y los semiconductores tienen una conductividad media, útil en dispositivos electrónicos.</p>
+				</div>
+				<div class="conector">
+					<p>Podemos ver que cuando las cargas fluyen por un camino se genera una corriente eléctrica. Ahora definiremos a lo que se refiere este término.</p>
+				</div>
+				<div class="concepto">
+					<div class="concepto1">
+						<h1>CORRIENTE ELÉCTRICA</h1>
+					</div>
+					<div class="concepto2">
+						<p class="parrafo2">La corriente es el movimiento de cargas eléctricas.</p>
+					</div>
+					<script type="text/javascript">
+						let parrafo2 = document.querySelector(".parrafo2");
+						let oracion1_2 = "La corriente es el movimiento de cargas eléctricas.";
+						let oracion2_2 = "La corriente eléctrica es el flujo de cargas eléctricas, generalmente electrones, a través de un material conductor, como un cable de metal. Este flujo se produce cuando existe una diferencia de potencial eléctrico (voltaje) entre dos puntos, lo que crea una fuerza electromotriz que impulsa las cargas a moverse. Se mide en Amperios(A) y tiene como fórmula: I = q/t donde t es el tiempo.";
+						parrafo2.addEventListener("click", function1);
+						function function1() {
+						 	cambiarConcepto(oracion1_2, oracion2_2, parrafo2);
+						}
+					</script>
+				</div><br>
+				<div class="conector">
+					<p>La manera de visualizar los átomos proviene del modelo de Bohr. Es de gran importancia conocerlo ya que será más facil entender los conceptos electrónicos</p>
+				</div><br>
+				<div class="comentarioGrafico">
+					<div class="comentarioGrafico1">
+						<img src="IMAGES/atomoBohr.jpg">
+					</div>
+					<div class="comentarioGrafico2">
+						<p>El modelo de Bohr de la estructura atómica, propuesto por Niels Bohr en 1913, describe el átomo como un núcleo pequeño y denso con carga positiva (donde se encuentran protones y neutrones) rodeado de electrones que giran alrededor del núcleo en órbitas circulares definidas. Este modelo se desarrolló a partir del modelo de Rutherford y de la teoría cuántica emergente.</p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer">
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">DONDE ESTAMOS</p>
+					<p><a href="https://maps.app.goo.gl/SUvPL5rN2Dfm8QAR7" target="_blank"><i class="fas fa-map-marker-alt"></i> Calle Yanacocha Esquina Catacora #969</a></p>
+					<p><i class="fas fa-phone-alt"></i> <a href="tel://59122280480" target="_blank">2280480</a>|<a href="tel://59122283240" target="_blank">2283240</a></p>
+					
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">ENLACES DE INTERES</p>
+					<p><a href="https://www.itclp.com/" target="_blank"><i class="fas fa-globe globe-icon"></i> https://www.itclp.com</a></p>
+					<p><a href="mailto:secretariaacademica@itclp.com" target="_blank"><i class="fas fa-globe globe-icon"></i> secretariaacademica@itclp.com</a></p>
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">CONTÁCTANOS POR</p>
+					<p class="ppp"><a href="https://wa.me/59165650886" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+					<p class="ppp"><a href="https://t.me/+59165650886" target="_blank" class="telegram"><i class="fab fa-telegram"></i> Telegram</a></p>
+					<p class="ppp"><a href="https://www.facebook.com/65650886" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></p>
+					<p class="ppp"><a href="https://www.instagram.com/65650886" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></p>
+					<p class="ppp"><a href="https://www.youtube.com/@jorgequisbert9115" target="_blank" class="youtube"><i class="fab fa-youtube"></i> YouTube</a></p>
+					<p class="ppp"><a href="https://x.com/65650886" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a></p>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="contactanos menuExtra">
+		<a href="contactanosEstudiantes.html" target="_blank" class="resto">Estudiantes</a>
+		<a href="contactanosInstituto.html" target="_blank" class="resto">Instituto</a>
+	</div>
+	<div class="acerca menuExtra">
+		<a href="homePage.html" target="_blank" class="resto">Inicio</a>
+		<a href="acercaIntegrantes.html" target="_blank" class="resto">Integrantes</a>
+	</div>
+	<div class="biblio menuExtra">
+		<a href="bibliompi.html" target="_blank" class="mate">MPI-101</a>
+		<a href="bibliopgr.html" target="_blank" class="progra">PGR-102</a>
+		<a href="biblioint.html" target="_blank" class="ingles">INT-103</a>
+		<a href="bibliohdc.html" target="_blank" class="hardware">HDC-104</a>
+		<a href="bibliotso.html" target="_blank" class="sisOpe">TSO-105</a>
+		<a href="bibliootm.html" target="_blank" class="ofimatica">OTM-106</a>
+		<a href="bibliodpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="prueba menuExtra" id="ponteAPrueba">
+		<a href="juego1mpi.html" target="_blank" class="mate">MPI-101</a>
+		<a href="juego1pgr.html" target="_blank" class="progra">PGR-102</a>
+		<a href="juego1int.html" target="_blank" class="ingles">INT-103</a>
+		<a href="juego1hdc.html" target="_blank" class="hardware">HDC-104</a>
+		<a href="juego1tso.html" target="_blank" class="sisOpe">TSO-105</a>
+		<a href="juego1otm.html" target="_blank" class="ofimatica">OTM-106</a>
+		<a href="juego1dpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="extraDiv">
+		<div class="ayudaDiv"></div>
+		<div class="menuHorizontal">
+			<a href="tema1hdc.html" target="_self" id="selectedContent">Tema 1 - HDC</a>
+			<a href="tema2hdc.html" target="_blank">Tema 2 - HDC</a>
+			<a href="tema3hdc.html" target="_blank">Tema 3 - HDC</a>
+			<a href="tema4hdc.html" target="_blank">Tema 4 - HDC</a>
+			<a href="tema5hdc.html" target="_blank">Tema 5 - HDC</a>
+			<a href="tema1mpi.html" target="_blank" class="mate">MPI-101</a>
+			<a href="tema1pgr.html" target="_blank" class="progra">PGR-102</a>
+			<a href="tema1int.html" target="_blank" class="ingles">INT-103</a>
+			<!--<a href="tema1hdc.html" target="_blank" class="hardware">HDC-104</a>-->
+			<a href="tema1tso.html" target="_blank" class="sisOpe">TSO-105</a>
+			<a href="tema1otm.html" target="_blank" class="ofimatica">OTM-106</a>
+			<a href="tema1dpw.html" target="_blank" class="diseñoWeb">DPW-107</a>
+		</div>
+	</div>
+	<div class="extraDiv2">
+		<div class="ayudaDiv2"></div>
+		<div class="menuHorizontal2">
+			
+			<div class="mmm">
+				<button onclick="fmenu1()" class="buttonWords1">PONTE A PRUEBA</button>
+				<div class="nnn menu1">
+					<a href="juego1mpi.html" target="_blank" class="mate words">MPI-101</a>
+					<a href="juego1pgr.html" target="_blank" class="progra words">PGR-102</a>
+					<a href="juego1int.html" target="_blank" class="ingles words">INT-103</a>
+					<a href="juego1hdc.html" target="_blank" class="hardware words">HDC-104</a>
+					<a href="juego1tso.html" target="_blank" class="sisOpe words">TSO-105</a>
+					<a href="juego1otm.html" target="_blank" class="ofimatica words">OTM-106</a>
+					<a href="juego1dpw.html" target="_blank" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu2()" class="buttonWords2">BIBLIOGRAFÍA</button>
+				<div class="nnn menu2">
+					<a href="bibliompi.html" target="_blank" class="mate words">MPI-101</a>
+					<a href="bibliopgr.html" target="_blank" class="progra words">PGR-102</a>
+					<a href="biblioint.html" target="_blank" class="ingles words">INT-103</a>
+					<a href="bibliohdc.html" target="_blank" class="hardware words">HDC-104</a>
+					<a href="bibliotso.html" target="_blank" class="sisOpe words">TSO-105</a>
+					<a href="bibliootm.html" target="_blank" class="ofimatica words">OTM-106</a>
+					<a href="bibliodpw.html" target="_blank" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu3()" class="buttonWords3">ACERCA DE NOSOTROS</button>
+				<div  class="nnn menu3">
+					<a href="homePage.html" target="_blank" class="resto2 words">Inicio</a>
+					<a href="acercaIntegrantes.html" target="_blank" class="resto2 words">Integrantes</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu4()" class="buttonWords4">CONTÁCTANOS</button>
+				<div  class="nnn menu4">
+					<a href="contactanosEstudiantes.html" target="_blank" class="resto2 words">Estudiantes</a>
+					<a href="contactanosInstituto.html" target="_blank" class="resto2 words">Instituto</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener('resize', function () {
+			let menuHorizontal2 = document.querySelector(".extraDiv2");
+			menuHorizontal2.style.width = "0%";
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink = document.querySelector('.contactanos1');
+		let toggleDiv = document.querySelector('.contactanos');
+		let isHovering = false; 
+		function showDiv() {
+		    toggleDiv.style.height = '100px';
+		}
+		function hideDiv() {
+			if (!isHovering) {
+			    toggleDiv.style.height = '0px';
+			}
+		}
+		hoverLink.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		hoverLink.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10); 
+		});
+		toggleDiv.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		toggleDiv.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink2 = document.querySelector('.acerca1');
+		let toggleDiv2 = document.querySelector('.acerca');
+		let isHovering2 = false; 
+		function showDiv2() {
+		    toggleDiv2.style.height = '100px';
+		}
+		function hideDiv2() {
+			if (!isHovering2) {
+			    toggleDiv2.style.height = '0px';
+			}
+		}
+		hoverLink2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		hoverLink2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10); 
+		});
+		toggleDiv2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		toggleDiv2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink3 = document.querySelector('.biblio1');
+		let toggleDiv3 = document.querySelector('.biblio');
+		let isHovering3= false; 
+		function showDiv3() {
+		    toggleDiv3.style.height = '356px';
+		}
+		function hideDiv3() {
+			if (!isHovering3) {
+			    toggleDiv3.style.height = '0px';
+			}
+		}
+		hoverLink3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		hoverLink3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10); 
+		});
+		toggleDiv3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		toggleDiv3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink4 = document.querySelector('.prueba1');
+		let toggleDiv4 = document.querySelector('.prueba');
+		let isHovering4= false; 
+		function showDiv4() {
+		    toggleDiv4.style.height = '356px';
+		}
+		function hideDiv4() {
+			if (!isHovering4) {
+			    toggleDiv4.style.height = '0px';
+			}
+		}
+		hoverLink4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		hoverLink4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10); 
+		});
+		toggleDiv4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		toggleDiv4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10);
+		});
+	</script>
+    <script>
+        const cuerpoPrincipal = document.querySelector('.cuerpoPrincipal');
+        let lastScrollTop = 0;
+
+        cuerpoPrincipal.addEventListener('scroll', () => {
+            let scrollTop = cuerpoPrincipal.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                contenido.style.display = "none";
+                cabezaPrincipal.style.height = "0px";
+            } else {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                setTimeout(function() {contenido.style.display = "block";}, 100);
+                
+                cabezaPrincipal.style.height = function1();
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+        function function1() {
+        	const x = "60px";
+        	const y = "45px";
+        	if (window.innerWidth>=950) {
+        		return x;
+        	} else {
+        		return y;
+        	}
+        }
+    </script>
+
+</body>
+</html>

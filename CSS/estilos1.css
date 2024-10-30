@@ -1,0 +1,121 @@
+.tituloPresentacion {
+	background-image: linear-gradient(to left, #e06307, #4c443e);
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.titulo2>img {
+	width: 40%;
+	height: 300px;
+}
+.titulo2 {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding-top: 40px;
+}
+.titulo1 {
+	display: flex;
+	width: 60%;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	justify-items: center;
+
+}
+.titulo1>h1 {
+	text-align: center;
+	font-size: 30px;
+
+}
+.titulo1>h1>span {
+	color: #611f09;
+	font-size: 300px;
+	font-family: fantasy;
+	margin-left: 30px;
+	
+}
+.mvo {
+	width: 100%;
+}
+.mvo>p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.mvoTitles {
+	color: darkorange;
+	width: 100%;
+
+}
+.origenTitle {
+	background-color: orange;
+	padding: 20px;
+	margin: 0px;
+	font-size: 20px;
+	text-align: center;
+}
+.origenDiv>p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.origenDiv {
+	width: 100%;
+	background-color: #463f32;
+
+}
+.integrantes {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+
+}
+.integrantes>div {
+	width: 33.333%;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+.integrantes>div>img {
+	width: 60%;
+	height: 240px;
+	
+}
+
+@media only screen and (max-width: 950px) {
+	.tituloPresentacion {
+		flex-direction: column;
+		background-image: linear-gradient(to top, #e06307, #4c443e);
+	}
+	.titulo1 {
+		width: 100%;
+
+	}
+	.titulo2 {
+		width: 100%;
+	}
+	.titulo2>img {
+		width: 200px;
+	}
+	.titulo1>h1>span {	
+	font-size: 200px;
+	margin-left: 0px;
+	
+	}
+	.integrantes {
+	flex-direction: column;
+
+	}
+	.integrantes>div {
+		width: 100%;
+	}
+	.integrantes>div>img {
+		width: 200px;
+		height: 240px;
+		
+	}
+	
+}

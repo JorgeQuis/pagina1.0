@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Juego 2 - PGR</title>
+	<link rel="icon" type="image/x-icon" href="IMAGES/logoitclapaz.jpg">
+	<link rel="stylesheet" type="text/css" href="CSS/estiloGeneral1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/juegoAdivinaPalabras.css">
+	<script type="text/javascript" src="JAVASCRIPT/dinamicaGeneral.js"></script>
+</head>
+<body>
+	<div class="contenedorSupremo">
+		<div class="cabezaPrincipal">
+			<button onclick="functionMenuHorizontal()">&#8801;</button><!--&#8801;-->
+			<div>
+				<p class="contenido">PONTE A<br>PRUEBA</p>
+				<!--<button onclick="">&#9681;</button>-->
+				<a href="#" class="prueba1">CONTENIDO DIDÁCTICO</a>
+				<a href="#" class="biblio1">BIBLIOGRAFÍA</a>
+				<a href="#" class="acerca1">ACERCA DE NOSOTROS</a>
+				<a href="#" class="contactanos1">CONTÁCTANOS</a>
+				<button onclick="functionHello()" id="menuResponsivo">MENÚ</button>
+				
+			</div>
+			
+		</div>
+		<div class="cuerpoPrincipal">
+			
+			<div class="cuerpo">
+				<section>
+		            <h2>ADIVINA LA PALABRA</h2>
+		            <div id="palabra"></div>
+		            <h3>Pista: <span id="ayuda"></span></h3>
+		            <h3>Intentos restantes: <span id="intentos">5</span></h3>
+		            <h3>Letras introducidas: <span id="letrasIngresadas"></span></h3>
+		            <button onclick="cargarNuevaPalabra()">Nueva Palabra</button>
+		        </section>
+		        <script src="JAVASCRIPT/juegoAdivinaPalabras.js"></script>
+			</div>
+			
+			<div class="footer">
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">DONDE ESTAMOS</p>
+					<p><a href="https://maps.app.goo.gl/SUvPL5rN2Dfm8QAR7" target="_blank"><i class="fas fa-map-marker-alt"></i> Calle Yanacocha Esquina Catacora #969</a></p>
+					<p><i class="fas fa-phone-alt"></i> <a href="tel://59122280480" target="_blank">2280480</a>|<a href="tel://59122283240" target="_blank">2283240</a></p>
+					
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">ENLACES DE INTERES</p>
+					<p><a href="https://www.itclp.com/" target="_blank"><i class="fas fa-globe globe-icon"></i> https://www.itclp.com</a></p>
+					<p><a href="mailto:secretariaacademica@itclp.com" target="_blank"><i class="fas fa-globe globe-icon"></i> secretariaacademica@itclp.com</a></p>
+				</div>
+				<div>
+					<p style="font-size: 21px; font-family: Arial;">CONTÁCTANOS POR</p>
+					<p class="ppp"><a href="https://wa.me/59165650886" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+					<p class="ppp"><a href="https://t.me/+59165650886" target="_blank" class="telegram"><i class="fab fa-telegram"></i> Telegram</a></p>
+					<p class="ppp"><a href="https://www.facebook.com/65650886" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></p>
+					<p class="ppp"><a href="https://www.instagram.com/65650886" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></p>
+					<p class="ppp"><a href="https://www.youtube.com/@jorgequisbert9115" target="_blank" class="youtube"><i class="fab fa-youtube"></i> YouTube</a></p>
+					<p class="ppp"><a href="https://x.com/65650886" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a></p>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="contactanos menuExtra">
+		<a href="" class="resto">Punto 1</a>
+		<a href="" class="resto">Punto 2</a>
+	</div>
+	<div class="acerca menuExtra">
+		<a href="homePage.html" target="_blank" class="resto">INICIO</a>
+		<a href="" class="resto">Punto 2</a>
+	</div>
+	<div class="biblio menuExtra">
+		<a href="" class="mate">MPI-101</a>
+		<a href="" class="progra">PGR-102</a>
+		<a href="" class="ingles">INT-103</a>
+		<a href="" class="hardware">HDC-104</a>
+		<a href="" class="sisOpe">TSO-105</a>
+		<a href="" class="ofimatica">OTM-106</a>
+		<a href="" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="prueba menuExtra">
+		<a href="" class="mate">MPI-101</a>
+		<a href="" class="progra">PGR-102</a>
+		<a href="" class="ingles">INT-103</a>
+		<a href="" class="hardware">HDC-104</a>
+		<a href="" class="sisOpe">TSO-105</a>
+		<a href="" class="ofimatica">OTM-106</a>
+		<a href="" class="diseñoWeb">DPW-107</a>
+	</div>
+	<div class="extraDiv">
+		<div class="ayudaDiv"></div>
+		<div class="menuHorizontal">
+			<a href="juego1pgr.html" target="_blank">Juego-PGR 1</a>
+			<a href="juego2pgr.html" id="selectedContent">Juego-PGR 2</a>
+			<a href="juego3pgr.html" target="_blank">Juego-PGR 3</a>
+			<a href="juego4pgr.html" target="_blank">Juego-PGR 4</a>
+			<a href="#">Juego-PGR 5</a>
+			<a href="#">Juego-PGR 6</a>
+			<a href="#">Juego-PGR 7</a>
+		</div>
+	</div>
+	<div class="extraDiv2">
+		<div class="ayudaDiv2"></div>
+		<div class="menuHorizontal2">
+			
+			<div class="mmm">
+				<button onclick="fmenu1()" class="buttonWords1">CONTENIDO DIDÁCTICO</button>
+				<div class="nnn menu1">
+					<a href="" class="mate words">MPI-101</a>
+					<a href="" class="progra words">PGR-102</a>
+					<a href="" class="ingles words">INT-103</a>
+					<a href="" class="hardware words">HDC-104</a>
+					<a href="" class="sisOpe words">TSO-105</a>
+					<a href="" class="ofimatica words">OTM-106</a>
+					<a href="" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu2()" class="buttonWords2">BIBLIOGRAFÍA</button>
+				<div class="nnn menu2">
+					<a href="" class="mate words">MPI-101</a>
+					<a href="" class="progra words">PGR-102</a>
+					<a href="" class="ingles words">INT-103</a>
+					<a href="" class="hardware words">HDC-104</a>
+					<a href="" class="sisOpe words">TSO-105</a>
+					<a href="" class="ofimatica words">OTM-106</a>
+					<a href="" class="diseñoWeb words">DPW-107</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu3()" class="buttonWords3">ACERCA DE NOSOTROS</button>
+				<div  class="nnn menu3">
+					<a href="homePage.html" target="_blank" class="resto2 words">INICIO</a>
+					<a href="" class="resto2 words">Punto 2</a>
+				</div>
+			</div>
+			<div class="mmm">
+				<button onclick="fmenu4()" class="buttonWords4">CONTÁCTANOS</button>
+				<div  class="nnn menu4">
+					<a href="" class="resto2 words">Punto 1</a>
+					<a href="" class="resto2 words">Punto 2</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener('resize', function () {
+			let menuHorizontal2 = document.querySelector(".extraDiv2");
+			menuHorizontal2.style.width = "0%";
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink = document.querySelector('.contactanos1');
+		let toggleDiv = document.querySelector('.contactanos');
+		let isHovering = false; 
+		function showDiv() {
+		    toggleDiv.style.height = '100px';
+		}
+		function hideDiv() {
+			if (!isHovering) {
+			    toggleDiv.style.height = '0px';
+			}
+		}
+		hoverLink.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		hoverLink.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10); 
+		});
+		toggleDiv.addEventListener('mouseover', () => {
+		    isHovering = true;
+		    showDiv();
+		});
+
+		toggleDiv.addEventListener('mouseout', () => {
+		    isHovering = false;
+		    setTimeout(hideDiv, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink2 = document.querySelector('.acerca1');
+		let toggleDiv2 = document.querySelector('.acerca');
+		let isHovering2 = false; 
+		function showDiv2() {
+		    toggleDiv2.style.height = '100px';
+		}
+		function hideDiv2() {
+			if (!isHovering2) {
+			    toggleDiv2.style.height = '0px';
+			}
+		}
+		hoverLink2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		hoverLink2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10); 
+		});
+		toggleDiv2.addEventListener('mouseover', () => {
+		    isHovering2 = true;
+		    showDiv2();
+		});
+
+		toggleDiv2.addEventListener('mouseout', () => {
+		    isHovering2 = false;
+		    setTimeout(hideDiv2, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink3 = document.querySelector('.biblio1');
+		let toggleDiv3 = document.querySelector('.biblio');
+		let isHovering3= false; 
+		function showDiv3() {
+		    toggleDiv3.style.height = '356px';
+		}
+		function hideDiv3() {
+			if (!isHovering3) {
+			    toggleDiv3.style.height = '0px';
+			}
+		}
+		hoverLink3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		hoverLink3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10); 
+		});
+		toggleDiv3.addEventListener('mouseover', () => {
+		    isHovering3 = true;
+		    showDiv3();
+		});
+
+		toggleDiv3.addEventListener('mouseout', () => {
+		    isHovering3 = false;
+		    setTimeout(hideDiv3, 10);
+		});
+	</script>
+	<script type="text/javascript">
+		let hoverLink4 = document.querySelector('.prueba1');
+		let toggleDiv4 = document.querySelector('.prueba');
+		let isHovering4= false; 
+		function showDiv4() {
+		    toggleDiv4.style.height = '356px';
+		}
+		function hideDiv4() {
+			if (!isHovering4) {
+			    toggleDiv4.style.height = '0px';
+			}
+		}
+		hoverLink4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		hoverLink4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10); 
+		});
+		toggleDiv4.addEventListener('mouseover', () => {
+		    isHovering4 = true;
+		    showDiv4();
+		});
+
+		toggleDiv4.addEventListener('mouseout', () => {
+		    isHovering4 = false;
+		    setTimeout(hideDiv4, 10);
+		});
+	</script>
+    <script>
+        const cuerpoPrincipal = document.querySelector('.cuerpoPrincipal');
+        let lastScrollTop = 0;
+
+        cuerpoPrincipal.addEventListener('scroll', () => {
+            let scrollTop = cuerpoPrincipal.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                contenido.style.display = "none";
+                cabezaPrincipal.style.height = "0px";
+            } else {
+                let cabezaPrincipal = document.querySelector(".cabezaPrincipal");
+                let contenido = document.querySelector(".contenido");
+                setTimeout(function() {contenido.style.display = "block";}, 100);
+                
+                cabezaPrincipal.style.height = function1();
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+        function function1() {
+        	const x = "60px";
+        	const y = "45px";
+        	if (window.innerWidth>=950) {
+        		return x;
+        	} else {
+        		return y;
+        	}
+        }
+    </script>
+
+</body>
+</html>
+<!--Create code in html, css and javascript of a game where you can slice some images to left or right. If the user slices the image to the right side,  that means that the user thinks that the image is hardaware. If the user slices the image to the left side,  that means that the user thinks that the image is software. The program must tell the user if they make the correct decision. There are some contraints: 1. The game must be inside -->

@@ -1,0 +1,149 @@
+.datosInformacionJuego {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.datosInformacionJuego1 {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.datosInformacionJuego2 {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.datosInformacionJuego1>button {
+	background-color: black;
+	padding: 20px;
+}
+.datosInformacionJuego2>p {
+	background-color: white;
+	color: black;
+	text-align: center;
+	padding: 20px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+.juego4 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background-color: #474440;
+    color: white;
+    /*font-family: Arial, sans-serif; */
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+#instrucciones {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.instruccion {
+    background-color: #363333;
+    padding: 15px;
+    margin: 5px 0;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid #696969;
+    cursor: grab;
+}
+
+.instruccion:active {
+    cursor: grabbing;
+}
+
+.juego4 button {
+    padding: 10px 20px;
+    background-color: #6a994e;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.juego4 button:hover {
+    background-color: #7fb685;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.botonCambio {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.botonCambio1 {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.botonCambio1>button {
+	margin: 0px;
+	padding: 10px;
+	background-color: gray;
+	font-size: 20px;
+}
+.botonCambio2 {
+	width: 75%;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+}
+.botonCambio2>p {
+	margin: 30px;
+	padding: 20px;
+	background-color: white;
+	color: black;
+	text-align: left;
+}
+.botonCambio2>iframe {
+	width: 70%;
+	height: 800px;
+}
+.botonCambio2>img {
+	width: 50%;
+	height: 600px;
+	padding-top: 20px;
+}
+@media only screen and (max-width: 950px) {
+	.datosInformacionJuego {
+		flex-direction: column;
+	}
+	.datosInformacionJuego1 {
+		width: 100%;
+	}
+	.datosInformacionJuego2 {
+		width: 100%;
+	}
+	.botonCambio {
+		flex-direction: column;
+	}
+	.botonCambio1, .botonCambio2 {
+		width: 100%;
+	}
+	.botonCambio2>img {
+		width: 60%;
+	}
+	
+}

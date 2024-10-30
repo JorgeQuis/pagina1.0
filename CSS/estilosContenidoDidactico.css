@@ -1,0 +1,140 @@
+.concepto {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 0px;
+}
+.concepto1 {
+	width: 35%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.concepto2 {
+	width: 65%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.concepto1>h1 {
+	font-size: 25px;
+	padding: 20px;
+	margin: 15px;
+	text-align: center;
+}
+.concepto2>p {
+	padding: 10px;
+	border-radius: 20px;
+	background-color: black;
+	cursor: pointer;
+	margin: 15px;
+	text-align: center;
+}
+.tituloCuerpo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.tituloCuerpo>h1 {
+	font-size: 45px;
+	margin: 15px;
+	text-align: center;
+}
+.conector {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.conector>p {
+	margin: 20px;
+	color: black;
+}
+.comentario {
+	width: 100%;
+}
+.cuadroImagenes {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cuadroImagenes table {
+	border: 2px solid black;
+	border-collapse: collapse;
+	background-color: black;
+	margin-bottom: 30px;
+}
+.cuadroImagenes th {
+	border: 2px solid black;
+	font-size: 30px;
+	padding: 10px;
+}
+.cuadroImagenes td {
+	border: 2px solid black;
+}
+.cuadroImagenes img {
+	width: 30vw;
+	height: 180px;
+	margin: 10px;
+}
+.comentario>p {
+	margin: 35px;
+	padding: 15px;
+	border-radius: 10px;
+}
+.comentarioGrafico {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 0px;
+}
+.comentarioGrafico1 {
+	width: 45%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.comentarioGrafico1>img {
+	width: 70%;
+	height: 250px;
+	margin: 10px;
+}
+.comentarioGrafico2 {
+	width: 55%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.comentarioGrafico2>p {
+	margin: 35px;
+	padding: 15px;
+	border-radius: 10px;
+}
+@media only screen and (max-width: 950px) {
+	.concepto {
+		flex-direction: column;
+	}
+	.concepto1, .concepto2 {
+		width: 100%;
+	}
+	.cuadroImagenes img {
+		height: 90px;
+	}
+	.tituloCuerpo>h1 {
+		font-size: 35px;
+	}
+	.comentarioGrafico {
+		flex-direction: column;
+	}
+	.comentarioGrafico1, .comentarioGrafico2 {
+		width: 100%;
+	}
+	.comentarioGrafico1 img {
+		height: 230px;
+	}
+}
